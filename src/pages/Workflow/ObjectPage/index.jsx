@@ -1,14 +1,23 @@
 import React from "react";
+import WorkflowBuilder from "./components/workflow-builder";
+import { ReactFlowProvider } from "reactflow";
+import Sidebar from "./components/sidebar";
 
 const ObjectPage = () => {
   return (
-    <div className="flex flex-col h-full">
-      <div className="flex items-center justify-between p-4 bg-gray-100 dark:bg-gray-800">
-        <h1 className="text-xl font-semibold text-gray-900 dark:text-white">
-          Flow Builder
-        </h1>
+    <main className="flex min-h-screen flex-col">
+      <div className="flex-1">
+        <div className="flex h-screen">
+          <ReactFlowProvider>
+            {/* workflow */}
+            <WorkflowBuilder />
+
+            {/* sidebar */}
+            <Sidebar />
+          </ReactFlowProvider>
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 export default ObjectPage;

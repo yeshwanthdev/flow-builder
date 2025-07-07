@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Outlet } from "react-router-dom";
 import { ModeToggle } from "@/components/global/mode-toggel";
 
-export default function Main({ children }) {
+export default function Main() {
   return (
     // <SidebarProvider>
     //   <SidebarInset>
