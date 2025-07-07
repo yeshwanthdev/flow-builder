@@ -1,6 +1,7 @@
+import * as RM from "@root/rm";
 import { createSlice } from "@reduxjs/toolkit";
 
-const storageKey = "vite-ui-theme";
+const storageKey = RM.commonConfig.themeStorageKey;
 const getInitialTheme = () => localStorage.getItem(storageKey) || "system";
 
 const themeSlice = createSlice({

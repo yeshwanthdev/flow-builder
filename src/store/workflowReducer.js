@@ -1,21 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// currently not using
 const initialEditorState = {
   elements: [],
-  selectedNode: {
-    data: {
-      completed: false,
-      current: false,
-      description: "",
-      metadata: {},
-      title: "",
-      type: "Trigger",
-    },
-    id: "",
-    position: { x: 0, y: 0 },
-    type: "Trigger",
-  },
   edges: [],
+  selectedNode: null,
 };
 
 const workflowSlice = createSlice({
@@ -30,7 +19,7 @@ const workflowSlice = createSlice({
       state.editor.edges = action.payload.edges;
     },
     selectElement(state, action) {
-      state.editor.selectedNode = action.payload.element;
+      state.editor.selectedNode = action.payload;
     },
     updateNode(state, action) {
       const { id, data } = action.payload;
