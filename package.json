@@ -9,7 +9,11 @@
     "start-test": "node setupConfig test && vite",
     "start-prod": "node setupConfig prod && vite",
     "dev": "vite",
-    "build": "vite build",
+    "build": "node setupConfig local && vite build",
+    "build-dev": "node setupConfig dev && vite build",
+    "build-test": "node setupConfig test && vite build",
+    "build-prod": "node setupConfig prod && vite build",
+    "build-stg": "node setupConfig stg && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
